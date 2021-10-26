@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 100vh;
+}
+
+.contianer {
+    background: rgba(137, 43, 226, 0.2);
+    border-radius: 10px;
+    min-width: 20rem;
+    padding: 2rem;
+    margin: 1rem 0 1.6rem 0;
+    border: none;
+    
+}
+
+.header {
+    color: rgb(132, 0, 255);
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.6rem;
+}
+
+.opportunity {
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.won {
+    color: rgba(0, 128, 0, 0.555);
+}
+
+.game-over {
+    color: rgba(255, 0, 0, 0.76);
+}
+
+.puzzle {
+    color: rgba(43, 43, 43, 0.753);
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: 700;
+    justify-content: space-around;
+    padding: 3rem 0 3rem 0;
+    text-decoration: underline;
+}
+
+.handel-game {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-game {
+    border: rgb(132, 0, 255) solid 2px;
+    background: white;
+    border-radius: 10px;
+    color: rgb(132, 0, 255);
+    font-size: 1.6rem;
+    font-weight: 550;
+    margin-top: 1.6rem;
+    padding: 1rem;
+}
+
+.game-level {
+    border: rgb(132, 0, 255) solid 2px;
+    border-radius: 10px;
+    color: rgb(132, 0, 255);
+    font-size: 1.6rem;
+    font-weight: 550;
+    margin-top: 1.6rem;
+    padding: 1rem;
+}
+
+.new-game:hover {
+    background: rgb(132, 0, 255);
+    color: white;
+}

@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgba(0, 119, 128, 0.2);
     height: 100vh;
 }
 
@@ -23,7 +23,7 @@ body{
     min-width: 20rem;
     padding: 2rem;
     margin: 1rem 0 1.6rem 0;
-    border: none;
+    border: rgb(132, 0, 255) 3px dashed;
     
 }
 
@@ -69,7 +69,7 @@ body{
 
 .new-game {
     border: rgb(132, 0, 255) solid 2px;
-    background: white;
+    background: rgba(128, 0, 128, 0.1);
     border-radius: 10px;
     color: rgb(132, 0, 255);
     font-size: 1.6rem;
@@ -79,6 +79,7 @@ body{
 }
 
 .game-level {
+    background: rgba(128, 0, 128, 0.1);
     border: rgb(132, 0, 255) solid 2px;
     border-radius: 10px;
     color: rgb(132, 0, 255);

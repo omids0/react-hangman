@@ -28,7 +28,10 @@ const HangmanApp = () => {
     }, [playable])
 
     useEffect(() => {
-        count === wrongGuesses.length && setPlayable(false)
+        if(wrongGuesses.length === opportunity) {
+            setPlayable(false)
+        }
+        // opportunity === wrongGuesses.length && setPlayable(false)
     }, [correctGuesses, wrongGuesses])
 
     useEffect(() => {
@@ -60,7 +63,6 @@ const HangmanApp = () => {
         if (response.status === 200) {
             const data = await response.json()
             const puzzle = data.puzzle.toLowerCase()
-            console.log(puzzle)
             setWord(puzzle)
             setCount(data.puzzle.length)
         } else {
@@ -68,11 +70,15 @@ const HangmanApp = () => {
         }
     }
 
+    //functions
     const changeLevel = (e) => {
         setLevel(e.target.value)
         setQuery(!query)
-        console.log(e.target.value)
     }
+
+    
+    const parseLevel = parseInt(level)
+    const opportunity = Math.floor(count/parseLevel)
 
     //check-if-pushed-all-the-correct-words
     const splitWord = word.split('')
@@ -87,7 +93,7 @@ const HangmanApp = () => {
         <div className='contianer'>
             <h1 className='header'>Hangman Game</h1>
             <div className='status'>
-                {<p className='opportunity'>Your Opportunity: {wrongGuesses.length} / {count}</p>}
+                {<p className='opportunity'>Your Opportunity: {wrongGuesses.length} / {opportunity}</p>}
                 {correctGuesses.length + wonStatus === uniqWord.length && <h2 className='won'>You Won!</h2>}
                 {!playable && <h2 className='game-over'>Game Over!</h2>}
             </div>
@@ -96,9 +102,9 @@ const HangmanApp = () => {
                 <button className='new-game' onClick={() => setQuery(!query)}>New Game</button>
                 <select className='game-level' onChange={changeLevel}>
                     <option value='1'>Easy</option>
-                    <option value='2'>Hard</option>
-                    <option value='3'>Very Hard</option>
-                    <option value='4'>Very Very Hard</option>
+                    <option value='2'>Avreage</option>
+                    <option value='3'>Difficult</option>
+                    <option value='4'>Most Difficult</option>
                 </select>
             </div>
 

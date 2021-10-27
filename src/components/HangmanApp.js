@@ -28,7 +28,7 @@ const HangmanApp = () => {
     }, [playable])
 
     useEffect(() => {
-        if(wrongGuesses.length === opportunity) {
+        if(wrongGuesses.length === opportunity && word) {
             setPlayable(false)
         }
         // opportunity === wrongGuesses.length && setPlayable(false)
